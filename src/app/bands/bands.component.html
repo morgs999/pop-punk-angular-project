@@ -1,1 +1,11 @@
-<p>bands works!</p>
+<section>
+    <p>First band: {{bandName}}</p>
+</section>
+<div [hidden]="hideAlbum">
+    Listn here!
+    <div [innerText]="albumOne">
+
+</div>
+</div>
+
+<button (click)="toggle()">ToGgLe</button>
