@@ -13,18 +13,14 @@ import { NgIf, DatePipe } from '@angular/common';
 
 
 export class BandsComponent {
-  bandName = 'Stand Atlantic';
-  // albumOne = 'Skinny Dipping';
-  hideAlbum = false;
-  toggle(){
-    this.hideAlbum = !this.hideAlbum;
-  }
+
+  
   bands: Band = {
     name: 'Stand Atlantic',
-    tracks: 10,
+    hometown: 'Australia',
     active: true
   }
-  skinnyDipping: Album = {
+  album: Album = {
     albumName: 'Skinny Dipping',
     releaseDate: new Date('11-Nov-2011 11:11:11'),
     rating: 4,
@@ -32,5 +28,9 @@ export class BandsComponent {
     recordLabel: 'Hopeless Records',
     LP: true,
     EP: false
+  }
+  hideAlbum = false;
+  toggle(){
+    this.hideAlbum = !this.hideAlbum;
   }
 }

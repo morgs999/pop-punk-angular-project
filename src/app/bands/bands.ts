@@ -1,6 +1,6 @@
 export interface Band {
     name: string;
-    tracks: number;
+    hometown: string;
     active: boolean;
 }
 

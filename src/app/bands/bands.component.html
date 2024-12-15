@@ -1,31 +1,31 @@
 <section>
-    <p>First band: {{bandName}}</p>
-</section>
-<hr>
-<div [hidden]="hideAlbum">
-    <h6>
-        Name: {{skinnyDipping.albumName}}
-    </h6>
-    <h6>
-        Release: {{skinnyDipping.releaseDate | date : 'short' }}
-    </h6>
-    <img [src]="skinnyDipping.cover" height="90px" width="90px"/>
-    <p>
-        {{skinnyDipping.rating}} out of 5 *'s.
-    </p>
-    <p>
-        Label: {{skinnyDipping.recordLabel}}
-    </p>
-    <p>
-        Is this an LP? {{skinnyDipping.LP}}
-    </p>
-</div>
-<button (click)="toggle()">Hide Album</button>
-<hr>
-<h3 *ngIf="bands.tracks > 0">
-    Number of Tracks: {{bands.tracks}}
-</h3>
+    <h2>
+        <p>Artist: {{bands.name}}</p>
+    </h2>
+    <hr>
+    <div [hidden]="hideAlbum">
+        <h6>
+            Name: {{album.albumName}}
+        </h6>
+        <h6>
+            Release: {{album.releaseDate | date : 'short' }}
+        </h6>
+        <img [src]="album.cover" height="90px" width="90px" />
+        <p>
+            {{album.rating}} out of 5 *'s.
+        </p>
+        <p>
+            Label: {{album.recordLabel}}
+        </p>
+        <p>
+            Is this an LP? {{album.LP}}
+        </p>
+    </div>
+    <button (click)="toggle()">Hide Album</button>
+    <hr>
 
-<h4 *ngIf="bands.active">
-    {{bands.name}} lives!
-</h4>
+
+    <h4 *ngIf="bands.active">
+        {{bands.name}} live from {{bands.hometown}}!
+    </h4>
+</section>
